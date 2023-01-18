@@ -52,10 +52,17 @@ class Member_Login
     {
         $account = isset($_REQUEST['account']) ? $_REQUEST['account'] : null;
         $password = isset($_REQUEST['password']) ? $_REQUEST['password'] : null;
+        $token = isset($_REQUEST['user_toeken']) ? $_REQUEST['user_toeken'] : null;
 
         $encryprt_password = Common_Used_By_Fn::encrypt(Common_Used::$LOGIN_ENCRYPT_SALT, Common_Used::$ENCRYPT_TYPE, $password);
 
         $member_info = new Member_Info();
+
+        if($_COOKIE['CSRFtoken'] != $token)
+        {
+            include_once dirname(dirname(__FILE__)).'/views/Login_Fail_view.php';
+            exit();
+        }
 
         if(!$this->check_login(strtolower($account), $encryprt_password))
         {

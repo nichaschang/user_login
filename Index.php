@@ -15,6 +15,10 @@ class Index
 
     function index()
     {
+
+        $token = bin2hex(openssl_random_pseudo_bytes(16));
+        setcookie("CSRFtoken", $token, time() + 60 * 60 * 24);
+
         if(empty($_SESSION['USER_ID']))
         {
             include_once dirname(__FILE__)."/views/Index_view.php";

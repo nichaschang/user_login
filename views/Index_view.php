@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="../css/common.css?v=1">
 </head>
 <body>
+<? include dirname(__FILE__).'/component/Head_Nav_Bar_view.php';?>
     <div class="container flex-center">
         <form action="/controllers/Member_Login.php" method="post">
+            <input type="hidden" name="user_toeken" value="<?=$token?>">
             <div class="flex-center flex-column">
                 <input type="hidden" value="login" name="task">
                 <div style="margin: 10px">
