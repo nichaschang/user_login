@@ -41,10 +41,15 @@
                 {?>
                     <li style="padding: 15px; border: 1px solid #999; margin: 6px">
                         <?= $type?>
+                        <ul class="flex-center flex-column font-s">
+                            <li>屬性：<?=$val['TYPE']?></li>
+                            <li>傷害：<?=$val['POWER']?></li>
+                            <li>命中：<?=$val['ACCURACY']?></li>
+                        </ul>
+                        <input type="hidden" name="skill-type" value="<?=$val['TYPE']?>">
+                        <input type="hidden" name="skill-power" value="<?=$val['POWER']?>">
+                        <input type="hidden" name="skill-accuracy" value="<?=$val['ACCURACY']?>">
                     </li>
-                    <input type="hidden" name="skill-type" value="<?=$val['TYPE']?>?>">
-                    <input type="hidden" name="skill-power" value="<?=$val['POWER']?>?>">
-                    <input type="hidden" name="skill-accuracy" value="<?=$val['ACCURACY']?>?>">
                 <?}?>
                 <?
                 if(count($this->sess_member_info['USER_EVENT_TAG']['SKILL']) < 4)

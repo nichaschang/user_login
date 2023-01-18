@@ -11,7 +11,7 @@
             <li class="flex-center">
                 <form action="/controllers/Member_Login.php" method="post">
                     <input type="hidden" name="task" value="logout">
-                    <input type="submit" value="Logout" class="logout-btn">
+                    <input type="submit" value="Logout" class="btn-logout">
                 </form>
             </li>
         <?}?>
