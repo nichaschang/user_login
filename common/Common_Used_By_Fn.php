@@ -19,7 +19,7 @@ class Common_Used_By_Fn
     // for password
     static function encrypt($salt = null, $encrypt_type = null, $password = null)
     {
-        return openssl_encrypt($salt, $encrypt_type, $password);
+        return openssl_encrypt($password, $encrypt_type, $salt);
     }
 
     //解密
