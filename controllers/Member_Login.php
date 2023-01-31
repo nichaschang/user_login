@@ -58,7 +58,7 @@ class Member_Login
 
         $member_info = new Member_Info();
 
-        if($_COOKIE['CSRFtoken'] != $token)
+        if($from_login_page AND $_COOKIE['CSRFtoken'] != $token)
         {
             include_once dirname(dirname(__FILE__)).'/views/Login_Fail_view.php';
             exit();
@@ -89,6 +89,10 @@ class Member_Login
         }
 
         $is_member_info = $member_info->get_member_info($this->sess_member_info['USER_ID']);
+        if(isset($_SESSION['USER_ID']) AND !empty($_SESSION['USER_ID']))
+        {
+            if($this->sess_member_info['USER_ID'] != $_SESSION['USER_ID']) session_unset();
+        }
 
         if(empty($is_member_info))
         {

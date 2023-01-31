@@ -48,7 +48,7 @@ class Common_Used
 
     public static $MEMBER_INFO_DATA = array(
         'psyduck' => array(
-            '/4cC/kZBSkF/2zpkXLBt2A==' => array(
+            'tSTFksa8m2w=' => array(
                 'USER_ID' => 1,
                 'USER_NAME' => 'psyduck',
                 'USER_LEVEL' => 2,
@@ -58,7 +58,7 @@ class Common_Used
             )
         ),
         'snorlax' => array(
-            'k3lAKL6fxJFY3iV3Nz6QwQ==' => array(
+            '/LXJ/cKzEco=' => array(
                 'USER_ID' => 2,
                 'USER_NAME' => 'snorlax',
                 'USER_LEVEL' => 4,
@@ -69,7 +69,7 @@ class Common_Used
 
         ),
         'marshtomp' => array(
-            'zH4emQJaXAWEoN0EungR1A==' => array(
+            'yeqpwqkIJ08=' => array(
                 'USER_ID' => 3,
                 'USER_NAME' => 'marshtomp',
                 'USER_LEVEL' => 1,
